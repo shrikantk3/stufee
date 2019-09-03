@@ -1,1 +1,83 @@
-<p>login works!</p>
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <form class="login100-form validate-form">
+                <span class="login100-form-title p-b-43">
+                    Login to <span class="text-success"> continue</span>
+                </span>
+                <br>
+                <br>
+                <div class="example-container">
+                <div class="form-field">
+                <mat-form-field>
+                    <input matInput type="email" placeholder="Email"required>
+                  </mat-form-field>   
+                </div>
+                <div class="form-field">
+                  <mat-form-field>
+                    <input matInput type="password" placeholder="Password"required>
+                  </mat-form-field>
+                </div>
+                <div class="flex-sb-m w-full p-t-3 p-b-32">
+                    <div class="contact100-form-checkbox">
+                        <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                        <label class="label-checkbox100" for="ckb1">
+                            Remember me
+                        </label>
+                    </div>
+
+                    <div>
+                        <a href="#" class="txt1">
+                            Forgot Password?
+                        </a>
+                    </div>
+                </div>
+        
+
+                <div class="container-login100-form-btn">
+                    <button mat-raised-button color="primary" style="width:100%">
+                        Login
+                    </button>
+                    <br>
+                    <br>
+                    <a mat-raised-button color="success" [routerLink]="['/admin/stufee']">Home page</a>
+                </div>
+            </div>
+                <div class="text-center p-t-46 p-b-20">
+                    <span class="txt2">
+                        or sign up using
+                    </span>
+                </div>
+
+                <div class="login100-form-social flex-c-m">
+                    <a href="#" class="login100-form-social-item flex-c-m bg1 m-r-5">
+                        <i class="fa fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+
+                    <a href="#" class="login100-form-social-item flex-c-m bg2 m-r-5">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="form-group">
+                    <h5>I am new user. <a [routerLink]="['/auth/register']">Create Now</a></h5>
+                </div>
+            </form>
+
+            <div class="login100-more" style="background-image: url('assets/images/bg-01.jpg');
+                display: flex;
+                align-items: center;
+                align-content: center;
+                text-align: center;
+                justify-content: center; 
+            ">
+                <figure>
+                    <img src="http://www.easyschoolsolution.com/education/photo/logo/Sli_13-imageedit_2_7943828340.gif" height="220" style="    background: #fff;
+                    border-radius: 50%;" />
+                    <h4 class="text-danger">Power By</h4>
+                    <img src="assets/images/logo_1.png" height="120" />
+                </figure>
+                <div class="overlay"></div>
+            </div>
+        </div>
+    </div>
+</div>

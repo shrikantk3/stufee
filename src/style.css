@@ -1,0 +1,6 @@
+.header-fixed .app-header {
+    position: fixed;
+    z-index: 1020;
+    width: 100%;
+    background: #d8d8d8;
+}
