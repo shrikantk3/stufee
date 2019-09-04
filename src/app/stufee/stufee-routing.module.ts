@@ -4,9 +4,18 @@ const _router:Routes =[
     { path:'', 
       component:StufeeAppComponent,
       children:[    
-        {path:'admin', loadChildren:'./admin/admin.module#AdminModule'},
-        {path:'teacher', loadChildren:'./teacher/teacher.module#TeacherModule'},
-        {path:'user', loadChildren:'./student/student.module#StudentModule'}
+        {
+          path:'admin', 
+          loadChildren:()=> import('./admin/admin.module').then(a=> a.AdminModule) 
+        },
+        {
+          path:'teacher', 
+          loadChildren: ()=> import('./teacher/teacher.module').then(t=>t.TeacherModule)
+        },
+        {
+          path:'user', 
+          loadChildren:()=> import('./student/student.module').then(s=>s.StudentModule)
+        }
     ]}
 ];
 

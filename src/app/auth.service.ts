@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { environment } from '../environments/environment'
 import {Observable} from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 
@@ -6,13 +7,18 @@ import { HttpClient, HttpHeaders } from '@angular/common/http'
   providedIn: 'root'
 })
 export class AuthService {
-
+   urlstr:string = environment.url;
   constructor( private http:HttpClient ) { }
-  login(req){
-   // let httpOptions=new HttpHeaders({ 'Content-Type': 'application/json'});
-     //return new Observable(()=>{
-       // this.http.post('',req, httpOptions);
-    // }); 
+  login(body){
+    const baseUrl = `${this.urlstr}/auth/login`
+    const httpOptions = {
+      headers: new HttpHeaders({
+          'Content-Type': 'application/json'
+      })
+    };
+    console.log(baseUrl, body, httpOptions);
+    //  return  this.http.post(baseUrl,body, httpOptions);
+    //  }); 
   }
   logedIn(){
      return !!localStorage.getItem('token');  

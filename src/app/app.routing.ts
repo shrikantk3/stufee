@@ -87,8 +87,8 @@ export const routes: Routes = [
       //   path: 'widgets',
       //   loadChildren: () => import('./views/widgets/widgets.module').then(m => m.WidgetsModule)
       // }
-    ],
-    canActivate:[AuthGuard],
+    ]
+
   },
   { path: '**', component: P404Component }
 ];
